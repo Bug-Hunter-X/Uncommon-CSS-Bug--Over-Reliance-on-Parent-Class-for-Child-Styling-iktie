@@ -1,0 +1,6 @@
+The following CSS code uses a less common but problematic approach to styling elements based on their parent's class.  It relies on the parent's class to style a child element, which can become difficult to maintain as the CSS grows. 
+```css
+.parent-class {/*styles for parent*/}
+.parent-class .child-class { /*styles for child, dependent on parent class*/}
+```
+This approach makes it difficult to reuse the `.child-class` styles independently without affecting other instances where the `.child-class` is nested under different parents.  It also makes debugging more complex as the relationship between parent and child styles needs to be tracked. 
